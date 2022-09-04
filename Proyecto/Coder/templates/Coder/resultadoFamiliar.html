@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Resultado búsqueda</h1>
+        {% if mensaje %}
+            <h2> {{ mensaje }} </h2>
+        {% else %}
+            {% for familiar in familiares %}
+                <h2>{{familiar.nombre}}</h2>
+                <h2>{{familiar.edad}}</h2>
+                <h2>{{familiar.fec_nacimiento}}</h2>
+                <h2>{{familiar.email}}</h2>
+            {% endfor %}
+        {% endif %}
+    </body>
+</html>

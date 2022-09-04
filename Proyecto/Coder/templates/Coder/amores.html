@@ -1,0 +1,17 @@
+{% extends "Coder/inicio.html" %}
+{% load static %}
+{% block titulo %}
+    <h1 class="mb-5">
+        AMORES
+    </h1>
+{% endblock %}
+
+{% block contenidoQueCambia %}
+    <br>
+    <form action = "{% url 'amores' %}", method = "POST"> {% csrf_token %}
+    <table>
+        {{formulario3.as_table}}
+    </table>
+    <input type="submit" value="enviar">
+    </form>
+{% endblock %}
